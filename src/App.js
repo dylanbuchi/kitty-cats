@@ -7,7 +7,7 @@ class App extends Component {
         super();
 
         this.state = {
-            monsters: [],
+            cats: [],
         };
     }
     async componentDidMount() {
@@ -15,13 +15,13 @@ class App extends Component {
         const response = await fetch(url);
         const users = await response.json();
 
-        this.setState({ monsters: users });
+        this.setState({ cats: users });
     }
 
     render() {
         return (
             <div className="App">
-                <CardList monsters={this.state["monsters"]}></CardList>
+                <CardList cats={this.state["cats"]}></CardList>
             </div>
         );
     }

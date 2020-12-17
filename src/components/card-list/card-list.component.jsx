@@ -10,8 +10,8 @@ class CardList extends Component {
     render() {
         return (
             <div className="card-list">
-                {this.props["monsters"].map((monster) => (
-                    <Card key={monster.id} monster={monster}></Card>
+                {this.props["cats"].map((cat) => (
+                    <Card key={cat.id} cat={cat}></Card>
                 ))}
             </div>
         );
