@@ -1,13 +1,17 @@
 import React, { Component } from "react";
+
 import { CardList } from "./components/card-list/card-list.component.jsx";
+
+import { SearchBox } from "./components/search-box/search-box.component.jsx";
+
 import "./App.css";
 
 class App extends Component {
     constructor() {
         super();
-
         this.state = {
             cats: [],
+            searchField: "",
         };
     }
     async componentDidMount() {
@@ -19,9 +23,23 @@ class App extends Component {
     }
 
     render() {
+        const { cats, searchField } = this.state;
+
+        const catsFilteredByName = cats.filter((cat) =>
+            cat.name.toLowerCase().includes(searchField.toLowerCase()),
+        );
         return (
             <div className="App">
-                <CardList cats={this.state["cats"]}></CardList>
+                <SearchBox
+                    placeholder="Search"
+                    handleChange={(e) =>
+                        this.setState(
+                            { searchField: e.target.value },
+                            () => this.state,
+                        )
+                    }
+                ></SearchBox>
+                <CardList cats={catsFilteredByName}></CardList>
             </div>
         );
     }
