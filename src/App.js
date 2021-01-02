@@ -1,48 +1,51 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import { CardList } from "./components/card-list/card-list.component.jsx";
+import { CardList } from './components/card-list/card-list.component.jsx';
 
-import { SearchBox } from "./components/search-box/search-box.component.jsx";
+import { SearchBox } from './components/search-box/search-box.component.jsx';
 
-import "./App.css";
+import './App.css';
 
 class App extends Component {
-    constructor() {
-        super();
-        this.state = {
-            cats: [],
-            searchField: "",
-        };
-    }
-    async componentDidMount() {
-        const url = "https://jsonplaceholder.typicode.com/users";
-        const response = await fetch(url);
-        const users = await response.json();
+  constructor() {
+    super();
+    this.state = {
+      cats: [],
+      searchField: '',
+    };
+  }
 
-        this.setState({ cats: users });
-    }
+  // properties
+  handleChange = (event) => {
+    this.setState({ searchField: event.target.value });
+  };
 
-    render() {
-        const { cats, searchField } = this.state;
+  // methods
+  async componentDidMount() {
+    const url = 'https://jsonplaceholder.typicode.com/users';
+    const response = await fetch(url);
+    const users = await response.json();
 
-        const catsFilteredByName = cats.filter((cat) =>
-            cat.name.toLowerCase().includes(searchField.toLowerCase()),
-        );
-        return (
-            <div className="App">
-                <SearchBox
-                    placeholder="Search"
-                    handleChange={(e) =>
-                        this.setState(
-                            { searchField: e.target.value },
-                            () => this.state,
-                        )
-                    }
-                ></SearchBox>
-                <CardList cats={catsFilteredByName}></CardList>
-            </div>
-        );
-    }
+    this.setState({ cats: users });
+  }
+
+  render() {
+    const { cats, searchField } = this.state;
+
+    const catsFilteredByName = cats.filter((cat) =>
+      cat.name.toLowerCase().includes(searchField.toLowerCase())
+    );
+    return (
+      <div className="App">
+        <h1 className="Title">Kitty Cats</h1>
+        <SearchBox
+          placeholder="Search"
+          handleChange={this.handleChange}
+        ></SearchBox>
+        <CardList cats={catsFilteredByName}></CardList>
+      </div>
+    );
+  }
 }
 
 export default App;
