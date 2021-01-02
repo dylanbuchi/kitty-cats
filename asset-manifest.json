@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/kitty-cats/static/css/main.1dc93ca5.chunk.css",
+    "main.js": "/kitty-cats/static/js/main.561aa22a.chunk.js",
+    "main.js.map": "/kitty-cats/static/js/main.561aa22a.chunk.js.map",
+    "runtime-main.js": "/kitty-cats/static/js/runtime-main.bbbaa5d3.js",
+    "runtime-main.js.map": "/kitty-cats/static/js/runtime-main.bbbaa5d3.js.map",
+    "static/js/2.5d421b09.chunk.js": "/kitty-cats/static/js/2.5d421b09.chunk.js",
+    "static/js/2.5d421b09.chunk.js.map": "/kitty-cats/static/js/2.5d421b09.chunk.js.map",
+    "static/js/3.b05f2944.chunk.js": "/kitty-cats/static/js/3.b05f2944.chunk.js",
+    "static/js/3.b05f2944.chunk.js.map": "/kitty-cats/static/js/3.b05f2944.chunk.js.map",
+    "index.html": "/kitty-cats/index.html",
+    "static/css/main.1dc93ca5.chunk.css.map": "/kitty-cats/static/css/main.1dc93ca5.chunk.css.map",
+    "static/js/2.5d421b09.chunk.js.LICENSE.txt": "/kitty-cats/static/js/2.5d421b09.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bbbaa5d3.js",
+    "static/js/2.5d421b09.chunk.js",
+    "static/css/main.1dc93ca5.chunk.css",
+    "static/js/main.561aa22a.chunk.js"
+  ]
+}
