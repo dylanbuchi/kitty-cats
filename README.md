@@ -1,5 +1,5 @@
 # Kitty Cats 
-## A single page application using React.js
+## A single page application using React.js.
 
 ### [Demo](https://dylanbuchi.github.io/kitty-cats/)
 
