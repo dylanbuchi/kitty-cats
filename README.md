@@ -1,5 +1,5 @@
 # Kitty Cats 
-## A single page application using React.js.
+A front-end project that allows users to search for cats data using an API. The user can enter a query in a search bar, and the app will fetch and display the relevant data from the API.
 
 ### [Demo](https://dylanbuchi.github.io/kitty-cats/)
 
